@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-function UserEntry() {
+function UserEntry(props) {
   return (
     <div>
-      <h2>User1 (Age1)</h2>
+      <h2>
+        {props.userName} ({props.userAge} years old)
+      </h2>
     </div>
   );
 }
