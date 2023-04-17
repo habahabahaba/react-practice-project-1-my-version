@@ -2,9 +2,9 @@ import React, { useState } from "react";
 function UserEntry(props) {
   return (
     <div>
-      <h2>
+      <p>
         {props.userName} ({props.userAge} years old)
-      </h2>
+      </p>
     </div>
   );
 }
