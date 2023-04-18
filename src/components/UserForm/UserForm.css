@@ -1,0 +1,30 @@
+.user-form {
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 33rem;
+  padding: 0 1rem 1rem 1rem;
+  z-index: 10;
+  background-color: white;
+  border-radius: 0.7rem;
+  text-align: start;
+}
+
+.form-header {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.form-input {
+  width: 32.5rem;
+}
+
+.button-container1 {
+  padding: 0.5rem 0 0 0;
+  text-align: start;
+}
+
+.button {
+}

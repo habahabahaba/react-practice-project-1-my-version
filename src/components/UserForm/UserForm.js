@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // import { v4 as uuidv4 } from "uuid";
+import "./UserForm.css";
 
 function UserForm(props) {
   const blankUserInput = {
@@ -31,33 +32,27 @@ function UserForm(props) {
     setUserInput((prevState) => blankUserInput);
   }
   return (
-    <form
-      onSubmit={submitHandler}
-      style={
-        {
-          // display: "flex",
-          // flexDirection: "column",
-          // alignItems: "center",
-          // justifyContent: "center",
-        }
-      }
-    >
-      <h1>Username</h1>
+    <form className="user-form" onSubmit={submitHandler}>
+      <h2 className="form-header">Username</h2>
       <input
+        className="form-input"
         type="text"
         value={userInput.enteredName}
         onChange={nameChangeHandler}
       ></input>
-      <h1>Age (Years)</h1>
+      <h2 className="form-header">Age (Years)</h2>
       <input
+        className="form-input"
         type="number"
         // min="0"
         step="1"
         value={userInput.enteredAge}
         onChange={ageChangeHandler}
       ></input>
-      <div style={{ alignContent: "end" }}>
-        <button type="submit">Add User</button>
+      <div className="button-container1" style={{}}>
+        <button className="button" type="submit">
+          Add User
+        </button>
       </div>
     </form>
   );

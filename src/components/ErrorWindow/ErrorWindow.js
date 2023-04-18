@@ -13,12 +13,12 @@ function ErrorWindow(props) {
           Invalid input
         </h2>
         <p className="error-message">{props.error.errorMessage}</p>
-        <div style={{}} className="button-area">
+        <div style={{}} className="button-container2">
           <button onClick={clickHandler} style={{}} className="button">
             Okay
           </button>
         </div>
-      </div>{" "}
+      </div>
       <div onClick={clickHandler} style={[]} className="error-overlay" />
     </div>
   );
