@@ -20,7 +20,7 @@ function App() {
 
   function addUserHandler(userData) {
     // Checking the userData:
-    if (userData.userName == "" || userData.userAge == "") {
+    if (userData.userName === "" || userData.userAge === "") {
       setError((prevState) => ({
         errorState: true,
         errorMessage: "Please enter a valid name and age (non-empty values).",
