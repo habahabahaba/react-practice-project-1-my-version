@@ -5,10 +5,9 @@ import UserList from "./components/UserList/UserList";
 import { v4 as uuidv4 } from "uuid";
 import ErrorWindow from "./components/ErrorWindow/ErrorWindow";
 
-// const userId = uuidv4();
-// console.log(userId);
+// const DUMMY_USER_ENTRIES = [{ userId: "someId", userName: "Max", userAge: 31 }];
 
-const DUMMY_USER_ENTRIES = [{ userId: "someId", userName: "Max", userAge: 31 }];
+const DUMMY_USER_ENTRIES = [];
 
 function App() {
   const [userEntries, setUserEntries] = useState(DUMMY_USER_ENTRIES);

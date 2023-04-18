@@ -9,7 +9,7 @@
   z-index: 110;
   background-color: white;
   border-radius: 0.7rem;
-  /* backdropFilter: blur(2px); */
+  /* backdrop-filter: blur(2px); */
 }
 
 .error-header {
