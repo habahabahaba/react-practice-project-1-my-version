@@ -33,12 +33,14 @@ function UserForm(props) {
   return (
     <form
       onSubmit={submitHandler}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      style={
+        {
+          // display: "flex",
+          // flexDirection: "column",
+          // alignItems: "center",
+          // justifyContent: "center",
+        }
+      }
     >
       <h1>Username</h1>
       <input
@@ -49,14 +51,14 @@ function UserForm(props) {
       <h1>Age (Years)</h1>
       <input
         type="number"
-        min="0"
+        // min="0"
         step="1"
         value={userInput.enteredAge}
         onChange={ageChangeHandler}
       ></input>
-      <button type="submit" style={{ display: "block" }}>
-        Add User
-      </button>
+      <div style={{ alignContent: "end" }}>
+        <button type="submit">Add User</button>
+      </div>
     </form>
   );
 }

@@ -3,6 +3,7 @@ import "./App.css";
 import UserForm from "./components/UserForm/UserForm";
 import UserList from "./components/UserList/UserList";
 import { v4 as uuidv4 } from "uuid";
+import ErrorWindow from "./components/ErrorWindow/ErrorWindow";
 
 // const userId = uuidv4();
 // console.log(userId);
@@ -14,20 +15,24 @@ function App() {
 
   const [error, setError] = useState({
     errorState: false,
-    errorMessage1: "",
-    errorMessage2: "",
-    errorMessage3: "",
+    errorMessage: "",
   });
 
   function addUserHandler(userData) {
     // Checking the userData:
     if (userData.userName == "" || userData.userAge == "") {
-      console.log("Please enter a valid name and age (non-empty values).");
+      setError((prevState) => ({
+        errorState: true,
+        errorMessage: "Please enter a valid name and age (non-empty values).",
+      }));
       return;
     }
 
     if (+userData.userAge < 0) {
-      console.log("Please enter a valid age (>0).");
+      setError((prevState) => ({
+        errorState: true,
+        errorMessage: "Please enter a valid age (>0).",
+      }));
       return;
     }
 
@@ -38,6 +43,9 @@ function App() {
 
   return (
     <div className="App">
+      {error.errorState === true && (
+        <ErrorWindow error={error} setError={setError} />
+      )}
       <UserForm onAddUser={addUserHandler} />
       <UserList userEntries={userEntries} />
     </div>
