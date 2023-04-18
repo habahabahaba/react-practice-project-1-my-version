@@ -1,0 +1,14 @@
+.user-list {
+  display: block;
+  /* position: fixed; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  width: 33rem;
+  /* z-index: 10; */
+  background-color: white;
+  border-radius: 0.7rem;
+  text-align: start;
+  /* overflow: visible; */
+  padding: 0 1rem 0 1rem;
+}
